@@ -1,31 +1,31 @@
 import { createStorage } from "../storage";
 
-describe('[Storage] Тесты хранилища ключ-значение', () => {
-    let storage: ReturnType<typeof createStorage>;
+describe("[Storage] Тесты хранилища ключ-значение", () => {
+  let storage: ReturnType<typeof createStorage>;
 
-    storage = createStorage();
+  storage = createStorage();
 
-    beforeEach(() => {
-        storage.init();
-    });
+  beforeEach(() => {
+    storage.init();
+  });
 
-    afterEach(() => {
-        storage.clear();
-    });
+  afterEach(() => {
+    storage.clear();
+  });
 
-    test('добавление элемента', () => {
-        storage.add('0', 'Kevin');
-        const storageLength = storage.getStorageLength();
-        expect(storageLength).toBe(1);
-    });
+  test("добавление элемента", () => {
+    storage.add("0", "Kevin");
+    const storageLength = storage.getStorageLength();
+    expect(storageLength).toBe(1);
+  });
 
-    test('удаление элемента', () => {
-        storage.add('1', 'Jim');
-        storage.add('2', 'Pam');
+  test("удаление элемента", () => {
+    storage.add("1", "Jim");
+    storage.add("2", "Pam");
 
-        storage.remove('2');
+    storage.remove("2");
 
-        const storageLength = storage.getStorageLength();
-        expect(storageLength).toBe(1);
-    });
+    const storageLength = storage.getStorageLength();
+    expect(storageLength).toBe(1);
+  });
 });

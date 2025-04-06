@@ -2,7 +2,6 @@ import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 import { Provider } from "react-redux";
 import store from "../../../store";
-import React from "react";
 
 test("Отображается заголовок", () => {
   render(

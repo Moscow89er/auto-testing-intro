@@ -6,7 +6,7 @@ describe("auth reducer", () => {
     const newState = authReducer(initialState, authActions.login());
     expect(newState.isAuthenticated).toBe(true);
   });
-  
+
   it("должен устанавливать isAuthenticated в false при вызове logout", () => {
     const initialState = { isAuthenticated: true };
     const newState = authReducer(initialState, authActions.logout());

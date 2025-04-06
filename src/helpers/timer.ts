@@ -1,3 +1,3 @@
 export function timer(callback: () => void) {
-    setTimeout(callback, 1000);
-};
+  setTimeout(callback, 1000);
+}

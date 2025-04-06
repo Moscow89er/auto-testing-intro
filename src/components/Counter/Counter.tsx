@@ -29,11 +29,19 @@ const Counter: FC = () => {
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
-      {show && <div className={classes.value}>{counter}</div>}
+      {show && (
+        <div data-testid="count" className={classes.value}>
+          {counter}
+        </div>
+      )}
       <div>
-        <button onClick={incrementHandler}>Increment</button>
+        <button data-testid="increment" onClick={incrementHandler}>
+          Increment
+        </button>
         <button onClick={increaseHandler}>Increase by 10</button>
-        <button onClick={decrementHandler}>Decrement</button>
+        <button data-testid="decrement" onClick={decrementHandler}>
+          Decrement
+        </button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
